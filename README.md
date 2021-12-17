@@ -84,6 +84,10 @@ BirdCount.busy_days([4, 5, 0, 0, 6])
 
 ## Source
 
+### Solved by
+
+- @gerald-annan
+
 ### Created by
 
 - @angelikatyborska
