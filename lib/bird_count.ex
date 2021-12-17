@@ -39,6 +39,16 @@ defmodule BirdCount do
 
   def busy_days(list) do
     # Please implement the busy_days/1 function
-    Enum.filter(list, &(&1 >= 5)) |> Enum.count()
+    # Enum.filter(list, &(&1 >= 5)) |> Enum.count()
+    case list do
+      [] ->
+        0
+
+      [h | t] ->
+        cond do
+          h >= 5 -> 1 + busy_days(t)
+          true -> busy_days(t)
+        end
+    end
   end
 end
